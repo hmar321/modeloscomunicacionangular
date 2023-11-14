@@ -1,0 +1,11 @@
+<div>
+    <h1>Padre deportes Component</h1>
+    <h1 style="color: blue;">
+        {{mensaje}}
+    </h1>
+    <ul>
+        <li *ngFor="let deporte of deportes">
+            <app-hijodeporte [deporte]="deporte" (favorito)="seleccionarFavorito($event)"></app-hijodeporte>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,27 @@
+<div>
+    <h1 style="color: red;">Librería component</h1>
+    <h2 style="color: green;">{{mensaje}}</h2>
+    <form #comicForm="ngForm">
+        <label>Título</label>
+        <input type="text" #cajatitulo name="cajatitulo"/><br/>
+        <label>Imagen</label>
+        <input type="text" #cajaimagen name="cajaimagen"/><br/>
+        <label>Descripción</label>
+        <input type="text" #cajadescripcion name="cajadescripcion"/><br/>
+        <button (click)="crearComic()" style="background-color: greenyellow;">Crear comic</button>
+    </form>
+    <hr>
+    <form #comicForm="ngForm">
+        <label>Título</label>
+        <input type="text" #cajauptitulo name="cajauptitulo" /><br/>
+        <label>Imagen</label>
+        <input type="text" #cajaupimagen name="cajaupimagen"/><br/>
+        <label>Descripción</label>
+        <input type="text" #cajaupdescripcion name="cajaupdescripcion"/><br/>
+        <button (click)="actualizarComic()" style="background-color: blue;color: white;">Actualizar comic</button>
+    </form>
+    <hr>
+    <div *ngFor="let comic of comics">
+        <app-comic [comic]="comic" (modificar)="modificarComic($event)" (eliminar)="eliminarComic($event)" (favorito)="comicFavorito($event)"></app-comic>
+    </div>
+</div>
