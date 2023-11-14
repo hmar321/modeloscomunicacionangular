@@ -7,7 +7,7 @@ import { DetalleProductoComponent } from './components/detalle-producto/detalle-
 const rutas: Routes = [
     { path: '', component: HomeComponent },
     { path: 'listaproductos', component: ListaProductosComponent },
-    { path: 'listaproductos/detalles', component: DetalleProductoComponent, },
+    { path: 'listaproductos/detalles/:producto', component: DetalleProductoComponent, },
 ];
 
 export const appRoutingProvider: any[] = [];

@@ -14,7 +14,7 @@ export class DetalleProductoComponent implements OnInit{
   ngOnInit(): void {
     this._route.params.subscribe((params:Params)=>{
       if (params['producto']!=null) {
-        this.producto=params['producto'];
+        this.producto=JSON.parse(params['producto']);
       }
     });
   }

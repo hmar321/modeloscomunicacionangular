@@ -36,6 +36,6 @@ export class ListaProductosComponent {
   }
 
   detallesProducto(producto: Producto): void {
-    this._router.navigate(['detalles']);
+    this._router.navigate(['listaproductos/detalles',JSON.stringify(producto)]);
   }
 }
